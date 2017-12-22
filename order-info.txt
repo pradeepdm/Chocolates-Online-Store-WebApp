@@ -1,0 +1,13 @@
+use jadrn033;
+drop table if exists orderinfo;
+create table orderinfo(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    orderdate DATE NOT NULL,
+    sku varchar(50) NOT NULL,
+    title varchar(50) NOT NULL,
+    quantity BIGINT(20) NOT NULL,
+    cost FLOAT(2) NOT NULL,
+    retail FLOAT(2) NOT NULL
+    );
+
+

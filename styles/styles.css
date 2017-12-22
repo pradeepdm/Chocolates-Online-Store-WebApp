@@ -1,0 +1,233 @@
+
+html, body {
+    height: 100%;
+    background-size: cover;
+    background:  url(../images/chocolate-background-1.jpg) no-repeat fixed center;
+    background-size: 100%;
+    color: #000000;
+    cursor: default;
+    font-family: font74344;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#main {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+#container{
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color:  #ffffff;
+}
+
+h1 {
+    text-align: center;
+    padding: 40px;
+    font-size: 60px;
+}
+
+h4 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+h3 {
+    text-align: left;
+padding: 10px;
+font-size: 40px;
+width: 75%;
+}
+
+#container h3{
+    text-align: center;
+    margin-left: 140px;
+}
+
+h5 {
+    padding: 5px;
+    padding-left: 0px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+p {
+    padding: 10px 50px 10px 50px;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+#navigation ul {
+    text-align: center;
+
+}
+
+#navigation li {
+    display: inline;
+}
+
+#navigation a {
+    text-decoration: none;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #000000;
+    display: inline-block;
+}
+
+#navigation a:hover {
+    color: #a59003;
+}
+
+#left-menu a:hover {
+    color: #a59003;
+}
+
+#navigation {
+    padding: 5px;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    width: 100%;
+}
+
+#separate {
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#header {
+    padding: 5px;
+    horiz-align: right;
+}
+
+.left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 5.5%;
+    border: 5px solid #000000;
+    padding: 10px;
+}
+
+#bag {
+    width: 100%
+}
+
+#nav-vertical {
+}
+
+.chocolate-flavors {
+    width: 35px;
+}
+
+#left-menu {
+    width: 20%;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+#left-menu a {
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#products-list {
+    width: 75%;
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    background-color:  #ffffff;
+    border-radius: 15px;
+}
+
+#display-chocolates {
+    margin: 5px;
+}
+
+div.inline {
+    float: left;
+}
+
+.toggle-content {
+    padding: 4px;
+}
+
+.checkbox {
+    padding: 10px;
+}
+
+td {
+    padding: 5px;
+}
+
+#items {
+    display: inline-block;
+    float: right;
+    padding: 5px;
+}
+
+#products-cart {
+    display: inline-block;
+    width: 75%;
+}
+
+.h3_bag {
+    text-align: right;
+    font-size: 30px;
+    padding: 5px;
+    color: #a59003;
+}
+
+
+#button_line{
+    margin-left:350px;
+}
+
+.confirm-table{
+    margin: 15px 5px 5px;
+    letter-spacing: 1.5px;
+}
+
+.confirm-table td{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.confirm-table th{
+    padding-top: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.confirm-table b{
+    font-size: 18px;
+}
+
+#products_table td{
+    color: #000000;
+}
+
+.addtocart {
+    margin-left: 5px;
+    background-color: #a59003;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 5px;
+}

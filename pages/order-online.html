@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bertha's Deluxe Chocolates</title>
+    <meta http-equiv="content-type"
+          content="text/html;charset=utf-8"/>
+    <script src="http://jadran.sdsu.edu/jquery/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/order-online.css"/>
+    <link href="https://www.fontify.me/wf/a899c3e7c4d07950ac58db0ee10c33f0" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../scripts/ajax_get_lib.js"></script>
+    <script type="text/javascript" src="../scripts/shopping_cart.js" ></script>
+    <script type="text/javascript" src="../scripts/products.js" ></script>
+    <script type="text/javascript" src="../scripts/order_form.js" ></script>
+</head>
+<body>
+<div id="main">
+    <div id="header">
+        <h3> <b>Bertha's Deluxe Chocolates</b> </h3>
+    </div>
+    <div id="navigation">
+
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="order-online.html">Order Online</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+    </div>
+    <div id="wrapper">
+
+        <div id="dynamic">
+            <fieldset>
+                <h3 class="orders-heading">Order Form</h3>
+                <form id="form1">
+                    <table>
+                        <tr>
+                            <td><label>Category</label></td>
+                            <td colid="2"><select id="chocolate-catrgory" class="dropdown">
+                                <option value="">--Please Select Category--</option>
+                                <option value="Milk chocolate">Milk chocolate</option>
+                                <option value="Dark chocolate">Dark chocolate</option>
+                                <option value="Nuts and chews">Nuts and chews</option>
+                                <option value="Brittles and toffies">Brittles and toffies</option>
+                                <option value="Truffles">Truffles</option>
+                                <option value="Gifts">Gifts</option>
+                                <option value="Holiday assortments">Holiday assortments</option>
+                            </select>
+                            </td>
+
+                        <tr>
+                            <td><label>Product:</label></td>
+                            <td colid="2"><select name="products" id="products" class="dropdown">
+                                <option value="">--None--</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label>Quantity:</label></td>
+                            <td><input class='q_box' type='number' value='1' min='1' id='o_quant'/></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colid="3">
+                                <input type="button" value="Reset" class="orderbuttons" id="order-reset"/>
+                                <input type="button" class="orderbuttons" value="Add to Cart" id="order-addtocart"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colid='3'><p id='order-errormessage'></p></td>
+                        </tr>
+
+                    </table>
+                </form>
+            </fieldset>
+        </div>
+        <div id="cart-inline"></div>
+
+        <div id="orderform">
+            <fieldset>
+                <h3 class="orders-heading">Checkout Form</h3>
+                <form name="order" method="post" action="/perl/jadrn033/confirmation.cgi" id="form2"
+                      enctype="multipart/form-data">
+                    <div id="hiddendiv">
+                        <input type="hidden" name="SKUNumber"/>
+                        <input type="hidden" name="Quantity"/>
+                        <input type="hidden" name="CostPrice"/>
+                        <input type='hidden' name='Price'/>
+                        <input type="hidden" name="Title"/>
+                        <input type="hidden" name="Tax"/>
+                        <input type="hidden" name="Shipping"/>
+                        <input type="hidden" name="Total"/>
+                    </div>
+                    <table>
+                        <tr>
+                            <td><label>First Name:</label></td>
+                            <td><input type="text" name="fname" id="fname" size="30"/></td>
+                            <td><label>Last Name:</label></td>
+                            <td><input type="text" name="lname" id="lname" size="30"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Phone:</label></td>
+                            <td colid="5">
+                                <input type="text" name="areacode" size="3" maxlength="3" id="hareacode"/>-
+                                <input type="text" name="prefix" size="3" maxlength="3" id="hprefix"/>-
+                                <input type="text" name="phone" size="4" maxlength="4" id="hphone"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Email:</label></td>
+                            <td colid="5"><input type="text" name="email" size="25"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><h3 class="orders-heading ">Shipping Address</h3></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Address1:</label></td>
+                            <td colid="5"><input type="text" name="s_address1" size="50"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Address2:</label></td>
+                            <td colid="5"><input type="text" name="s_address2" size="50"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>City:</label></td>
+                            <td colid="5">
+                                <input type="text" name="s_city" size="10"/>
+                                <label class="label1">State:</label>
+                                <input type="text" name="s_state" size="3" maxlength="3"/>
+                                <label class="labelz">Zipcode:</label>
+                                <input type="text" name="s_zip" size="11" id="s_zip" maxlength="5"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><h3 class="orders-heading">Payment Details</h3></td>
+                        </tr>
+                        <tr>
+                            <td><label>Name on Card:</label></td>
+                            <td colid="5">
+                                <input type="text" name="nameonc" size="30"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Payment Type:</label></td>
+                            <td colid="5"><input type="radio" name="cardpayment" value="credit" checked="checked"/>Credit
+                                Card
+                                <input type="radio" name="cardpayment" value="debit"/>Debit Card
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Card Type:</label></td>
+                            <td colid="5"><select id="crtype" name="crtype" class="dropdown1">
+                                <option value="cr1">American Express</option>
+                                <option value="cr2">Master</option>
+                                <option value="cr3">Visa</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label>Card Number:</label></td>
+                            <td colid="5"><input type="text" name="cardno" size="30" maxlength="16"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Valid Through:</label></td>
+                            <td colid="3">
+                                <input type="text" name="month" size="2" maxlength="2" placeholder="mm"/>/
+                                <input type="text" name="year" maxlength="4" size="4" placeholder="yyyy"/>
+                                <label class="label1">CVV:</label>
+                                <input type="text" name="cvv" maxlength="4" size="4"/></td>
+                        </tr>
+                        <tr>
+                            <td><h3 class="orders-heading">Billing Address</h3></td>
+                        </tr>
+                        <tr>
+                            <td colid="6"><input name="sameaddr" type="checkbox" value="selected"/>
+                                Same as Shipping Address
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Address1:</label></td>
+                            <td colid="5"><input type="text" name="b_address1" size="50"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Address2:</label></td>
+                            <td colid="5"><input type="text" name="b_address2" size="50"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>City:</label></td>
+                            <td colid="5">
+                                <input type="text" name="b_city" size="10"/>
+                                <label class="label1">State:</label>
+                                <input type="text" name="b_state" size="3" maxlength="3"/>
+                                <label class="labelz">Zipcode:</label>
+                                <input type="text" name="b_zip" size="11" id="b_zip" maxlength="5"/>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div id="display-errormessage">&nbsp;</div>
+
+                    <h2 id="button-line">
+                        <input type="reset"/>
+                        <input type="submit" value="Submit" name="submit-order" id="confirm"/>
+                    </h2>
+
+                </form>
+            </fieldset>
+        </div>
+        <p id="test"></p>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

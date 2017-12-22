@@ -1,0 +1,82 @@
+
+.orders-heading {
+    padding: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    width:auto;
+    text-decoration: underline;
+}
+
+body{
+    letter-spacing: 1px;
+    color: #000000;
+}
+label{
+    font-size: 15px;
+}
+
+input{
+    width: auto;
+}
+
+h5{
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+
+.displaycart td{
+    padding: 15px;
+}
+.displaycart th{
+    text-align: center;
+}
+
+#wrapper {
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#wrapper input[type="button"],
+#wrapper input[type="reset"],
+#wrapper input[type="submit"]
+{
+    padding: 10px;
+    margin: 5px;
+    background-color: #a59003;
+    color: #000000;
+    border-radius: 5px;
+}
+
+
+#wrapper input[type="text"]:focus,
+#wrapper input[type="date"]:focus,
+#wrapper input[type="datetime"]:focus,
+#wrapper input[type="email"]:focus,
+#wrapper input[type="number"]:focus,
+#wrapper input[type="search"]:focus,
+#wrapper input[type="time"]:focus,
+#wrapper input[type="url"]:focus,
+#wrapper input[type="tel"]:focus,
+#wrapper select:focus {
+    background-color: #a59003;
+}
+
+#button-line {
+    margin-left: 420px;
+}
+
+#display-errormessage {
+    color: whitesmoke;
+    margin: 10px;
+    margin-right: 10px;
+    width:98%;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    background-color: red;
+}
